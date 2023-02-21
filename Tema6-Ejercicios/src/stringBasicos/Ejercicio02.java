@@ -24,7 +24,7 @@ public class Ejercicio02 {
 //		Boolean acierta = false;
 		Scanner lectura = new Scanner(System.in);
 
-		System.out.println("Introduce la cadena a adivinar: ");
+		System.out.println("Introduce la c a adivinar: ");
 		pass = lectura.next();
 
 //		acierta= pass.equals(palabra);
@@ -42,15 +42,27 @@ public class Ejercicio02 {
 		System.out.println();
 		System.out.println("Intenta adivinar la contraseña");
 		palabra = lectura.next();
+
+		while (pass.length() != palabra.length()) {
+			System.out.println("No tiene el mismo tamaño que la contraseña");
+			System.out.println("Intenta adivinar la contraseña");
+			palabra = lectura.next();
+		if (pass.equals(palabra)) {
+			System.out.println("Has acertado");
+		} else {
 		
 		for (int i = 0; i < pass.length(); i++) {
-			if (palabra.charAt(i) == pass.charAt(i)) {
-				System.out.print(" " + palabra.charAt(i) + " ");
-			} else {
-				System.out.print(" * ");
+				if (palabra.charAt(i) == pass.charAt(i)) {
+					System.out.print(" " + palabra.charAt(i) + " ");
+				} else {
+					System.out.print(" * ");
+				}
 			}
+		}  
 		}
+		
+		
+		
+		lectura.close();
 	}
 }
-
-
