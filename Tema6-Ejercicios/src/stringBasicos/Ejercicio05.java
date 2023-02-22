@@ -13,14 +13,28 @@ public class Ejercicio05 {
 		 * “fin” no aparecerá en la frase final.
 		 */
 		
-		
+		// Declaramos variables
 		String palabra = "";
+		String frase = "";
 		
 		Scanner lectura = new Scanner(System.in);
-
-		System.out.println("Introduce la c a adivinar: ");
+		
+		// Pedimos la primera palabra
+		System.out.println("Introduce una palabra: ");
 		palabra = lectura.next();
 		
+		// Bucle while mientras no sea la palabra "fin" contando mayusculas
+		while (!palabra.equalsIgnoreCase("fin")) {
+			
+			// Añadimos al string frase la palabra que creamos y un espacio para separarlas
+			frase += palabra + " ";
+			
+			// Volvemos a pedir otra palabra
+			System.out.println("Introduce una palabra: ");
+			palabra = lectura.next();
+		}
+		// Imprimimos la frase creada
+		System.out.println(frase);
 		lectura.close();
 		
 		
