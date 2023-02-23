@@ -16,14 +16,14 @@ public class Ejercicio04 {
 		String fraseReves = "";
 		Scanner lectura = new Scanner(System.in);
 
-		System.out.println("Introduzca una frase para saber cuantos espacios hay");
+		System.out.println("Introduzca una frase para darle la vuelta");
 		frase = lectura.nextLine();
 
-		for (int i = 0; i > frase.length(); i--) {
+		for (int i = frase.length()-1; i >= 0; i--) {
 			fraseReves += frase.charAt(i);
 		}
 
-		System.out.println(fraseReves);
+		System.out.println("La frase: '" + frase + "' al revés es: " + fraseReves);
 	}
 
 }
