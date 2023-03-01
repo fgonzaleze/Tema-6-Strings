@@ -38,7 +38,7 @@ public class Ejercicio06 {
 		}
 
 		// Imprimimos
-		System.out.println("En la frase: '" + frase + "' hay " + cont + " veces la palabra " + palabra);
+		System.out.println("En la frase: '" + frase + "' hay " + cont + " veces la palabra: " +"'" + palabra + "'");
 
 		lectura.close();
 	}
