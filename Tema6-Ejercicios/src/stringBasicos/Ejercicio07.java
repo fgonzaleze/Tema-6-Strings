@@ -15,20 +15,35 @@ public class Ejercicio07 {
 		 * 
 		 */
 		
-		String frase = "";
-		String fraseReves = "";
+		String frase;
+
 		Scanner lectura = new Scanner(System.in);
 
-		System.out.println("Introduzca una frase para saber si es palindroma: ");
+		System.out.println("Introduzca una frase para saber si es palíndroma: ");
 		frase = lectura.nextLine();
 
-		for (int i = frase.length()-1; i >= 0; i--) {
-			fraseReves += frase.charAt(i);
+	    frase = frase.replaceAll(" ", "");
+
+	    String fraseInvertida = fraseAlReves(frase);
+
+	    if (fraseInvertida.equalsIgnoreCase(frase)) {
+	        System.out.println("La cadena introducida es un palíndromo.");
+	    } else {
+	        System.out.println("La cadena introducida no es un palíndromo.");
+	    }
+
+	    lectura.close();
+	}
+
+	public static String fraseAlReves(String frase) {
+		String alReves = "";
+
+		for (int i = frase.length() - 1; i >= 0; i--) {
+			alReves += frase.charAt(i);
 		}
+
+		return alReves;
 		
-		
-		System.out.println("La frase: '" + frase + "' al revés es: " + fraseReves);
-	
 	}
 
 }
